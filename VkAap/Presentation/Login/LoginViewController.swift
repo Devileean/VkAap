@@ -100,11 +100,11 @@ class LoginViewController: UIViewController {
     //немного дизайна
     private func setViews() {
         loginButton.layer.cornerRadius = 5
-        loginButton.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+        loginButton.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         titleImageView.layer.cornerRadius = 25
         titleImageView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-
+        
         
         
         

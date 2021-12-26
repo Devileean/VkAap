@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZO-w8-4BQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HZO-w8-4BQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KP-lf-6Fp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="657.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleVK" translatesAutoresizingMaskIntoConstraints="NO" id="p3n-c1-YEg">
                                                 <rect key="frame" x="32" y="70" width="350" height="170"/>
@@ -31,40 +31,41 @@
                                                     <constraint firstAttribute="width" constant="350" id="oLy-ho-bPJ"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKontakte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52a-6G-nbz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VKclient:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52a-6G-nbz">
                                                 <rect key="frame" x="24" y="264" width="366" height="55.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="4" height="-1"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8X-Nm-V6A">
-                                                <rect key="frame" x="24" y="419.5" width="366" height="17.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8X-Nm-V6A">
+                                                <rect key="frame" x="24" y="384.5" width="366" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa6-Mj-I3L">
-                                                <rect key="frame" x="24" y="503" width="366" height="17.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa6-Mj-I3L">
+                                                <rect key="frame" x="24" y="468" width="366" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your ID:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fHZ-wC-Thb">
-                                                <rect key="frame" x="24" y="445" width="366" height="34"/>
+                                                <rect key="frame" x="24" y="410" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-4C-hRS">
-                                                <rect key="frame" x="24" y="528.5" width="366" height="34"/>
+                                                <rect key="frame" x="24" y="493.5" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV7-ba-nee">
-                                                <rect key="frame" x="107" y="626.5" width="200" height="30"/>
+                                                <rect key="frame" x="107" y="591.5" width="200" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="21e-2l-POe"/>
@@ -85,7 +86,7 @@
                                         <constraints>
                                             <constraint firstItem="DV7-ba-nee" firstAttribute="top" secondItem="ORm-4C-hRS" secondAttribute="bottom" constant="64" id="0nc-F8-e3z"/>
                                             <constraint firstItem="52a-6G-nbz" firstAttribute="top" secondItem="p3n-c1-YEg" secondAttribute="bottom" constant="24" id="6bD-fl-8Dj"/>
-                                            <constraint firstItem="l8X-Nm-V6A" firstAttribute="top" secondItem="52a-6G-nbz" secondAttribute="bottom" constant="100" id="BvE-GE-M6M"/>
+                                            <constraint firstItem="l8X-Nm-V6A" firstAttribute="top" secondItem="52a-6G-nbz" secondAttribute="bottom" constant="65" id="BvE-GE-M6M"/>
                                             <constraint firstItem="p3n-c1-YEg" firstAttribute="top" secondItem="0KP-lf-6Fp" secondAttribute="top" constant="70" id="Ibe-1f-bHX"/>
                                             <constraint firstAttribute="trailing" secondItem="52a-6G-nbz" secondAttribute="trailing" constant="24" id="JY2-fm-7fc"/>
                                             <constraint firstAttribute="trailing" secondItem="l8X-Nm-V6A" secondAttribute="trailing" constant="24" id="LWJ-Ev-JFd"/>
@@ -332,62 +333,6 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsTableViewCell" id="XrB-n3-IQ6" customClass="FriendsTableViewCell" customModule="VkAap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="138.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XrB-n3-IQ6" id="7bc-23-dzx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FYi-DH-bJR">
-                                                    <rect key="frame" x="36" y="19.5" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="J8D-k9-nDZ"/>
-                                                        <constraint firstAttribute="width" constant="100" id="uUk-mR-qz3"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHJ-Pd-YbA">
-                                                    <rect key="frame" x="152" y="61" width="32.5" height="17"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-9A-EaU">
-                                                    <rect key="frame" x="144" y="99.5" width="30.5" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="9Hb-gR-9Kx"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="DAv-tv-3T3"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="RzB-25-bMN"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="ajv-Y3-fGK"/>
-                                                        <constraint firstAttribute="height" constant="20" id="nXS-Jn-N5X"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="WHJ-Pd-YbA" firstAttribute="leading" secondItem="FYi-DH-bJR" secondAttribute="trailing" constant="16" id="LjY-hM-yqU"/>
-                                                <constraint firstItem="Yj0-9A-EaU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FYi-DH-bJR" secondAttribute="trailing" constant="8" symbolic="YES" id="W1R-B4-wut"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WHJ-Pd-YbA" secondAttribute="trailing" constant="32" id="Yzr-YU-vfJ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FYi-DH-bJR" secondAttribute="bottom" constant="8" id="b5C-oy-D6H"/>
-                                                <constraint firstItem="Yj0-9A-EaU" firstAttribute="bottom" secondItem="FYi-DH-bJR" secondAttribute="bottom" id="d8H-MC-kzO"/>
-                                                <constraint firstItem="FYi-DH-bJR" firstAttribute="top" secondItem="7bc-23-dzx" secondAttribute="topMargin" priority="999" constant="8" id="e65-bv-7n3"/>
-                                                <constraint firstAttribute="trailing" secondItem="Yj0-9A-EaU" secondAttribute="trailing" constant="239.5" id="kDF-yY-Wcj"/>
-                                                <constraint firstItem="WHJ-Pd-YbA" firstAttribute="centerY" secondItem="FYi-DH-bJR" secondAttribute="centerY" id="lDH-A0-KGZ"/>
-                                                <constraint firstItem="Yj0-9A-EaU" firstAttribute="top" secondItem="WHJ-Pd-YbA" secondAttribute="bottom" constant="21.5" id="tvH-0l-6Yd"/>
-                                                <constraint firstItem="FYi-DH-bJR" firstAttribute="leading" secondItem="7bc-23-dzx" secondAttribute="leadingMargin" constant="16" id="xZU-Xv-4Bq"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="avatarImageView" destination="FYi-DH-bJR" id="PVp-tA-QzU"/>
-                                            <outlet property="genderAndAstrologyLabel" destination="Yj0-9A-EaU" id="x6F-dR-5va"/>
-                                            <outlet property="nameLabel" destination="WHJ-Pd-YbA" id="zPu-8W-FkC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="p0Q-8r-lbN" id="23N-nY-aby"/>
                                     <outlet property="delegate" destination="p0Q-8r-lbN" id="FuZ-u7-uDO"/>
@@ -405,6 +350,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Друзья" id="rVN-mv-PlY"/>
                     <connections>
+                        <outlet property="tableView" destination="XLN-gb-fwe" id="Wg2-Ju-ZqO"/>
                         <segue destination="Xj2-NG-9zU" kind="show" identifier="moveFotoCollection" id="cGb-Vx-jGS"/>
                     </connections>
                 </viewController>
@@ -515,11 +461,59 @@
                     <connections>
                         <segue destination="iCa-sE-Cmc" kind="relationship" relationship="viewControllers" id="CHT-SD-bEW"/>
                         <segue destination="AOi-yY-Aap" kind="relationship" relationship="viewControllers" id="KNU-0d-beI"/>
+                        <segue destination="VXx-41-WrL" kind="relationship" relationship="viewControllers" id="nic-Ov-guy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JE5-km-4wF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-204"/>
+            <point key="canvasLocation" x="1187" y="-204"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="8cv-zm-FTJ">
+            <objects>
+                <viewController id="HEj-B5-EyY" customClass="MyProfileViewController" customModule="VkAap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G7a-9K-bDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJb-Uh-uif">
+                                <rect key="frame" x="87" y="154" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0CX-n5-nf7"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Профиль" id="Eig-4T-TkL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3D-Fg-fF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="-901"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="v0R-Tg-Uii">
+            <objects>
+                <navigationController id="VXx-41-WrL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" selectedImage="person" id="MBv-ci-Lap">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xpl-vT-UCA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HEj-B5-EyY" kind="relationship" relationship="rootViewController" id="rtH-Va-xnS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgs-0r-HWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="-901"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="MAS-aG-PS1">
@@ -572,10 +566,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="titleVK" width="750" height="387"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

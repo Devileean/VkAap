@@ -8,6 +8,7 @@
 import UIKit
 
 class GroupsViewController: UIViewController {
+  
     @IBOutlet private var tableView: UITableView!
     
     var groups : [GroupModel] = []
