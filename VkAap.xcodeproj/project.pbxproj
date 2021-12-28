@@ -11,6 +11,8 @@
 		495EA60927773A0F006C5D38 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495EA60727773A0F006C5D38 /* FriendsCell.xib */; };
 		495EA60B2777D809006C5D38 /* CirclePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EA60A2777D809006C5D38 /* CirclePhotoView.swift */; };
 		49D46AB7276850CB001B6D51 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D46AB6276850CB001B6D51 /* MyProfileViewController.swift */; };
+		49EEF549277BA4A100261FC2 /* LikeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EEF548277BA4A100261FC2 /* LikeControlView.swift */; };
+		49EEF54D277BB03F00261FC2 /* LikeControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49EEF54C277BB03F00261FC2 /* LikeControlView.xib */; };
 		CE0E145026ABDE10000F24FF /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E144F26ABDE10000F24FF /* GroupTableViewCell.swift */; };
 		CE0E145426ABF5DE000F24FF /* GroupsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E145326ABF5DE000F24FF /* GroupsStorage.swift */; };
 		CE0E145626ABF931000F24FF /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E145526ABF931000F24FF /* GroupModel.swift */; };
@@ -38,6 +40,8 @@
 		495EA60727773A0F006C5D38 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		495EA60A2777D809006C5D38 /* CirclePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhotoView.swift; sourceTree = "<group>"; };
 		49D46AB6276850CB001B6D51 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		49EEF548277BA4A100261FC2 /* LikeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControlView.swift; sourceTree = "<group>"; };
+		49EEF54C277BB03F00261FC2 /* LikeControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeControlView.xib; sourceTree = "<group>"; };
 		CE0E144F26ABDE10000F24FF /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		CE0E145326ABF5DE000F24FF /* GroupsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsStorage.swift; sourceTree = "<group>"; };
 		CE0E145526ABF931000F24FF /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
@@ -89,6 +93,30 @@
 				49D46AB6276850CB001B6D51 /* MyProfileViewController.swift */,
 			);
 			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		49EEF51F277A687100261FC2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		49EEF546277BA43E00261FC2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				49EEF547277BA45300261FC2 /* LikeControl */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		49EEF547277BA45300261FC2 /* LikeControl */ = {
+			isa = PBXGroup;
+			children = (
+				49EEF548277BA4A100261FC2 /* LikeControlView.swift */,
+				49EEF54C277BB03F00261FC2 /* LikeControlView.xib */,
+			);
+			path = LikeControl;
 			sourceTree = "<group>";
 		};
 		CE0E144A26AA0B5A000F24FF /* FriendTable */ = {
@@ -153,6 +181,7 @@
 		CE267F8926AE1C4900BD71BD /* FotoCollection */ = {
 			isa = PBXGroup;
 			children = (
+				49EEF51F277A687100261FC2 /* New Group */,
 				CE267F8C26AE1CF300BD71BD /* FotoFriendsCollectionCell.swift */,
 			);
 			path = FotoCollection;
@@ -194,6 +223,7 @@
 		CE73A501269E2AAA00A747FC /* VkAap */ = {
 			isa = PBXGroup;
 			children = (
+				49EEF546277BA43E00261FC2 /* Controls */,
 				CEDD5CC526A8C6EA00C1C321 /* Repository */,
 				CE73A52326A8C38900A747FC /* Models */,
 				CE73A516269E304A00A747FC /* AppDelegate */,
@@ -346,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49EEF54D277BB03F00261FC2 /* LikeControlView.xib in Resources */,
 				CE73A50F269E2AB200A747FC /* LaunchScreen.storyboard in Resources */,
 				CE73A50C269E2AB200A747FC /* Assets.xcassets in Resources */,
 				CE73A50A269E2AAA00A747FC /* Main.storyboard in Resources */,
@@ -361,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDD5CCB26A8CDD300C1C321 /* FriendsStorage.swift in Sources */,
+				49EEF549277BA4A100261FC2 /* LikeControlView.swift in Sources */,
 				CE0E145C26AC888C000F24FF /* GlobalGroupsViewController.swift in Sources */,
 				CE73A51F26A0D6B900A747FC /* FriendsViewController.swift in Sources */,
 				CEDD5CC726A8C85800C1C321 /* FriendModel.swift in Sources */,
