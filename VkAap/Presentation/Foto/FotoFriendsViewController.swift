@@ -21,7 +21,7 @@ class FotoFriendsViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.register(UINib(nibName: "FotoFriendsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FotoFriendsCollectionViewCellXib")
     }
 }
 
@@ -36,10 +36,25 @@ extension FotoFriendsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FotoFriendsCollectionCell.identifier, for: indexPath) as! FotoFriendsCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FotoFriendsCollectionViewCellXib", for: indexPath) as! FotoFriendsCollectionViewCell
         let fotografy = fotografies[indexPath.item]
         cell.configure(foto: fotografy)
         
         return cell
     }
+}
+
+extension FotoFriendsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       // return CGSize(width: 300, height: 300)
+    
+        let width = view.bounds.width
+                let height = width
+                
+                return CGSize(width: width, height: height)
+    
+    }
+    
+
+    
 }

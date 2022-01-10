@@ -10,5 +10,4 @@ import Foundation
 struct FotoModel {
     var likeCount: String
     var fotoName: String
-    var likeIcon: String
 }

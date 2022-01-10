@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,7 @@
         <scene sceneID="5uy-GH-sSu">
             <objects>
                 <viewController id="HZO-w8-4BQ" customClass="LoginViewController" customModule="VkAap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nAo-2P-tbX">
+                    <view key="view" contentMode="scaleToFill" id="nAo-2P-tbX" customClass="GradientView" customModule="VkAap" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -56,12 +55,16 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your ID:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fHZ-wC-Thb">
                                                 <rect key="frame" x="24" y="410" width="366" height="34"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-4C-hRS">
                                                 <rect key="frame" x="24" y="493.5" width="366" height="34"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV7-ba-nee">
@@ -107,7 +110,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="0KP-lf-6Fp" firstAttribute="leading" secondItem="GhS-Vw-SQd" secondAttribute="leading" id="Xnv-WP-8BA"/>
                                     <constraint firstItem="0KP-lf-6Fp" firstAttribute="top" secondItem="GhS-Vw-SQd" secondAttribute="top" id="br8-xf-s5M"/>
@@ -125,6 +127,26 @@
                             <constraint firstItem="6LK-e2-uye" firstAttribute="bottom" secondItem="GhS-Vw-SQd" secondAttribute="bottom" id="hAy-yC-FIE"/>
                             <constraint firstItem="0KP-lf-6Fp" firstAttribute="width" secondItem="6LK-e2-uye" secondAttribute="width" id="psd-8X-Z2I"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" systemColor="systemBrownColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="1" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="DV7-ba-nee" id="hwh-Q3-ojf"/>
@@ -369,64 +391,13 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PD4-9c-CRK">
                                 <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N0c-cY-btq">
-                                    <size key="itemSize" width="295" height="314"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="evF-0J-X6z">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FotoFriendsCollectionCell" id="OY3-JV-c1i" customClass="FotoFriendsCollectionCell" customModule="VkAap" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="0.0" width="300" height="320"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="enk-jY-ONI">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-Ub-jgs">
-                                                    <rect key="frame" x="5" y="5" width="290" height="290"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="295" id="KjF-rc-5CS"/>
-                                                        <constraint firstAttribute="width" constant="295" id="bqK-qc-hQA"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-SY-MDK">
-                                                    <rect key="frame" x="5" y="300" width="15" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qeo-JY-wz7">
-                                                    <rect key="frame" x="30" y="300" width="43.5" height="15"/>
-                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="zrF-Ub-jgs" secondAttribute="bottom" constant="25" id="3xc-5x-4up"/>
-                                                <constraint firstAttribute="bottom" secondItem="oeL-SY-MDK" secondAttribute="bottom" constant="5" id="8Mo-fw-2eb"/>
-                                                <constraint firstItem="oeL-SY-MDK" firstAttribute="top" secondItem="zrF-Ub-jgs" secondAttribute="bottom" constant="5" id="8dz-Oh-QD5"/>
-                                                <constraint firstAttribute="trailing" secondItem="oeL-SY-MDK" secondAttribute="trailing" constant="280" id="FLI-v2-LgO"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qeo-JY-wz7" secondAttribute="trailing" symbolic="YES" id="QEg-gj-JbH"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qeo-JY-wz7" secondAttribute="bottom" constant="5" id="Qj7-98-Uhq"/>
-                                                <constraint firstItem="Qeo-JY-wz7" firstAttribute="leading" secondItem="oeL-SY-MDK" secondAttribute="trailing" constant="10" id="Zz1-oQ-VQr"/>
-                                                <constraint firstItem="zrF-Ub-jgs" firstAttribute="leading" secondItem="enk-jY-ONI" secondAttribute="leading" constant="5" id="irl-YP-nkX"/>
-                                                <constraint firstAttribute="trailing" secondItem="zrF-Ub-jgs" secondAttribute="trailing" constant="5" id="lAz-sX-Wf8"/>
-                                                <constraint firstItem="Qeo-JY-wz7" firstAttribute="centerY" secondItem="oeL-SY-MDK" secondAttribute="centerY" id="luH-eS-Ku4"/>
-                                                <constraint firstItem="oeL-SY-MDK" firstAttribute="leading" secondItem="enk-jY-ONI" secondAttribute="leading" constant="5" id="pzt-uq-xIm"/>
-                                                <constraint firstItem="zrF-Ub-jgs" firstAttribute="top" secondItem="enk-jY-ONI" secondAttribute="top" constant="5" id="tA7-Ad-4g4"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="300" height="320"/>
-                                        <connections>
-                                            <outlet property="fotoImageView" destination="zrF-Ub-jgs" id="KMe-YA-goc"/>
-                                            <outlet property="likeLabel" destination="oeL-SY-MDK" id="NV0-Ft-LCE"/>
-                                            <outlet property="likesCountLabel" destination="Qeo-JY-wz7" id="dfw-eb-Kaa"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M6a-7a-Sq3"/>
@@ -575,6 +546,9 @@
         <image name="titleVK" width="750" height="387"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
