@@ -11,6 +11,5 @@ struct FriendModel {
     var name: String
     var avatarName: String
     var genderAndAstrology: String
-    var questionnaire: [QuestionnaireModel]
     var fotos: [FotoModel]
 }

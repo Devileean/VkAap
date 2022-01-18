@@ -8,8 +8,9 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
- 
+    
     @IBOutlet weak var tableView: UITableView!
+    
     
     var friends: [FriendModel] = []
     
@@ -20,8 +21,9 @@ class FriendsViewController: UIViewController {
         let storage = FriendsStorage()
         friends = storage.friends
         tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCellXib")
-
+        
     }
+    
     //делаем сегу для фотографий из таблицы друзей на их фотографию(коллекции)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moveFotoCollection",
@@ -38,6 +40,8 @@ class FriendsViewController: UIViewController {
 
 extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
@@ -46,7 +50,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         friends.count
     }
     
-    //размещаем наш FriendsCell xib
+    // размещаем наш FriendsCell xib
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
             let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCellXib", for: indexPath) as? FriendsCell
@@ -57,6 +61,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(friends: friends)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "moveFotoCollection", sender: indexPath)
     }
