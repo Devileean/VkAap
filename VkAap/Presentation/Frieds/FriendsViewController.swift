@@ -13,17 +13,30 @@ class FriendsViewController: UIViewController {
     
     
     var friends: [FriendModel] = []
+    var friendsDictionary = [String: [String]] ()
+    var friendSectionTitles = [String]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.tableView.rowHeight = 100
         let storage = FriendsStorage()
         friends = storage.friends
+        
+        //регистрируем ячейку чтобы она отображалась в таблице
         tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCellXib")
         
-    }
-    
+                var firstSymbolArray = friends.map { itemFriend in String(itemFriend.name.prefix(1))
+                    }
+        
+                let setFirstSymbol = Set(firstSymbolArray)
+                firstSymbolArray = Array(setFirstSymbol)
+                print(firstSymbolArray)
+        
+        
+        
+            }
     //делаем сегу для фотографий из таблицы друзей на их фотографию(коллекции)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moveFotoCollection",
@@ -40,15 +53,18 @@ class FriendsViewController: UIViewController {
 
 extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        
+        
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //if section ==
         friends.count
+        
     }
+    
     
     // размещаем наш FriendsCell xib
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,5 +82,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "moveFotoCollection", sender: indexPath)
     }
 }
+
+
 
 

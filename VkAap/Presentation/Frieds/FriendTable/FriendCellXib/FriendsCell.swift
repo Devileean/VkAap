@@ -19,7 +19,7 @@ class FriendsCell: UITableViewCell {
     func configure(friends: FriendModel) {
 
         avatarImageView.image = UIImage(named: friends.avatarName)
-        nameLabel.text = friends.name
+        nameLabel.text = friends.name 
         genderAndAstrologyLabel.text = friends.genderAndAstrology
 
         backRoundView.backgroundColor = .lightGray

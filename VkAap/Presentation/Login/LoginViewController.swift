@@ -18,9 +18,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    var right = "Right"
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
+        animateTitleAppearing() //анимация Эмблема
+        animateFieldsAppearing() //анимация Текстфилды
+        animateAuthButton() //анимация кнопки
+        animateTitlesAppearing() //анимамация логин и пароль
+        animateVKclient() // анимация вк клиент
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +40,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -57,6 +66,13 @@ class LoginViewController: UIViewController {
             // Проверяем, верны ли они
             if login == "" && password == "" {
                 print("успешная авторизация")
+//                UIView.transition(with: loginLabel , duration: 1, options: [.transitionCurlUp], animations: {
+//                    self.loginLabel.text = self.right
+//                }, completion: nil)
+//                UIView.transition(with: passwordLabel , duration: 1, options: [.transitionCurlUp], animations: {
+//                    self.passwordLabel.text = self.right
+//                }, completion: nil)
+//
                 return true
             } else {
                 print("неуспешная авторизация")
@@ -70,6 +86,7 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
     }
     
     //  Когда клавиатура появляется
@@ -125,6 +142,84 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
+
+    //MARK: Animations
+    
+    //анимация главной эмблемы
+    func animateTitleAppearing() {
+        self.titleImageView.transform = CGAffineTransform(translationX: 0,
+                                                     y: -self.view.bounds.height/2)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseOut,
+                       animations: {
+                           self.titleImageView.transform = .identity
+                       },
+                       completion: nil)
+    }
+    
+    
+    //анимация тексфилдов
+    func animateFieldsAppearing() {
+        let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
+        fadeInAnimation.fromValue = 0
+        fadeInAnimation.toValue = 1
+        fadeInAnimation.duration = 1
+        fadeInAnimation.beginTime = CACurrentMediaTime() + 1
+        fadeInAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        fadeInAnimation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.loginTextField.layer.add(fadeInAnimation, forKey: nil)
+        self.passwordTextField.layer.add(fadeInAnimation, forKey: nil)
+    }
+    
+    //анимация кнопки
+    func animateAuthButton() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 2
+        animation.duration = 2
+        animation.beginTime = CACurrentMediaTime() + 1
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.loginButton.layer.add(animation, forKey: nil)
+    }
+    
+    //анимация логин и папроль
+    func animateTitlesAppearing() {
+        let offset = view.bounds.width
+        loginLabel.transform = CGAffineTransform(translationX: offset, y: 0)
+        passwordLabel.transform = CGAffineTransform(translationX: offset, y: 0)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       options: .curveEaseOut,
+                       animations: {
+                           self.loginLabel.transform = .identity
+                           self.passwordLabel.transform = .identity
+                       },
+                       completion: nil)
+    }
+    
+    //анимация вк клиент
+    func animateVKclient() {
+        let offset = view.bounds.width
+        titleLabel.transform = CGAffineTransform(translationX: -offset, y: 0)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       options: .curveEaseOut,
+                       animations: {
+                           self.titleLabel.transform = .identity
+                       },
+                       completion: nil)
+    }
+    
 }
 
 
