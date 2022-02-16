@@ -11,5 +11,5 @@ struct GroupModel {
     
     var groupName: String
     var avatarGroup: String
-    var sampleGroup: [SampleGroup]
+
 }

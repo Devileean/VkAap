@@ -89,9 +89,9 @@ extension GroupsViewController: UITableViewDataSource {
 
 extension GroupsViewController: UITableViewDelegate {
 
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "moveToMyGroups", sender: nil)
-}
+//func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    performSegue(withIdentifier: "moveToMyGroups", sender: nil)
+//}
 
 }
 

@@ -54,7 +54,7 @@ class LikeControlView: UIView {
         else {
             return
         }
-        //если прошло вс] удачно выставляем фрэйм по bounds текущему
+        //если прошло всёудачно выставляем фрэйм по bounds текущему
         view.frame = bounds
         //навсякий случай делаем чтобы она расширялась в соответствии со своей родительской view, можно и не делать
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -63,6 +63,13 @@ class LikeControlView: UIView {
 
 //создаём саму активность кнопки
     @IBAction func pressLikeButton(_ sender: UIButton) {
+       //анимация сердечка лайка
+        UIView.transition(with: likeButton ,
+                          duration: 1,
+                          options: [.transitionFlipFromRight],
+                          animations: {},
+                          completion: nil)
+
         if isLikeHeartActive {
             //чтобы отменть сердечко при нажатии
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)

@@ -324,7 +324,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-gb-fwe">
-                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="706"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -332,25 +332,33 @@
                                     <outlet property="delegate" destination="p0Q-8r-lbN" id="FuZ-u7-uDO"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-Ft-eGu">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dXZ-Xj-Cle"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dXZ-Xj-Cle" firstAttribute="bottom" secondItem="XLN-gb-fwe" secondAttribute="bottom" id="3zd-MT-5YW"/>
+                            <constraint firstItem="JCE-Ft-eGu" firstAttribute="leading" secondItem="dXZ-Xj-Cle" secondAttribute="leading" id="PpP-36-A6a"/>
                             <constraint firstItem="XLN-gb-fwe" firstAttribute="leading" secondItem="dXZ-Xj-Cle" secondAttribute="leading" id="RaU-lc-YVt"/>
-                            <constraint firstItem="XLN-gb-fwe" firstAttribute="top" secondItem="dXZ-Xj-Cle" secondAttribute="top" id="VCz-3m-YfX"/>
                             <constraint firstItem="dXZ-Xj-Cle" firstAttribute="trailing" secondItem="XLN-gb-fwe" secondAttribute="trailing" id="iOI-05-Zfq"/>
+                            <constraint firstItem="JCE-Ft-eGu" firstAttribute="top" secondItem="dXZ-Xj-Cle" secondAttribute="top" id="k3c-dG-3mG"/>
+                            <constraint firstItem="JCE-Ft-eGu" firstAttribute="trailing" secondItem="dXZ-Xj-Cle" secondAttribute="trailing" id="uyg-zu-gGx"/>
+                            <constraint firstItem="XLN-gb-fwe" firstAttribute="top" secondItem="JCE-Ft-eGu" secondAttribute="bottom" id="zeV-48-cAi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="rVN-mv-PlY"/>
                     <connections>
+                        <outlet property="friendsSearchBar" destination="JCE-Ft-eGu" id="T2U-Nz-tHi"/>
                         <outlet property="tableView" destination="XLN-gb-fwe" id="Wg2-Ju-ZqO"/>
                         <segue destination="Xj2-NG-9zU" kind="show" identifier="moveFotoCollection" id="cGb-Vx-jGS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVS-a8-ncO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3061" y="-585"/>
+            <point key="canvasLocation" x="3060.8695652173915" y="-585.26785714285711"/>
         </scene>
         <!--Фотографии-->
         <scene sceneID="pwj-ju-0Mz">

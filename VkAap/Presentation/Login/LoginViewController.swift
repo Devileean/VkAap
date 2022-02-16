@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         animateTitlesAppearing() //анимамация логин и пароль
         animateVKclient() // анимация вк клиент
         
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -66,13 +66,13 @@ class LoginViewController: UIViewController {
             // Проверяем, верны ли они
             if login == "" && password == "" {
                 print("успешная авторизация")
-//                UIView.transition(with: loginLabel , duration: 1, options: [.transitionCurlUp], animations: {
-//                    self.loginLabel.text = self.right
-//                }, completion: nil)
-//                UIView.transition(with: passwordLabel , duration: 1, options: [.transitionCurlUp], animations: {
-//                    self.passwordLabel.text = self.right
-//                }, completion: nil)
-//
+                //                UIView.transition(with: loginLabel , duration: 1, options: [.transitionCurlUp], animations: {
+                //                    self.loginLabel.text = self.right
+                //                }, completion: nil)
+                //                UIView.transition(with: passwordLabel , duration: 1, options: [.transitionCurlUp], animations: {
+                //                    self.passwordLabel.text = self.right
+                //                }, completion: nil)
+                //
                 return true
             } else {
                 print("неуспешная авторизация")
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController {
         showLoginAlert (message: "не верный identifier segue")
         return false
     }
-
+    
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
@@ -142,13 +142,13 @@ class LoginViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
-
+    
     //MARK: Animations
     
     //анимация главной эмблемы
     func animateTitleAppearing() {
         self.titleImageView.transform = CGAffineTransform(translationX: 0,
-                                                     y: -self.view.bounds.height/2)
+                                                          y: -self.view.bounds.height/2)
         
         UIView.animate(withDuration: 1,
                        delay: 1,
@@ -156,8 +156,8 @@ class LoginViewController: UIViewController {
                        initialSpringVelocity: 0,
                        options: .curveEaseOut,
                        animations: {
-                           self.titleImageView.transform = .identity
-                       },
+            self.titleImageView.transform = .identity
+        },
                        completion: nil)
     }
     
@@ -200,9 +200,9 @@ class LoginViewController: UIViewController {
                        delay: 1,
                        options: .curveEaseOut,
                        animations: {
-                           self.loginLabel.transform = .identity
-                           self.passwordLabel.transform = .identity
-                       },
+            self.loginLabel.transform = .identity
+            self.passwordLabel.transform = .identity
+        },
                        completion: nil)
     }
     
@@ -215,8 +215,8 @@ class LoginViewController: UIViewController {
                        delay: 1,
                        options: .curveEaseOut,
                        animations: {
-                           self.titleLabel.transform = .identity
-                       },
+            self.titleLabel.transform = .identity
+        },
                        completion: nil)
     }
     
