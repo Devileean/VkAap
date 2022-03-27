@@ -85,7 +85,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="DV7-ba-nee" firstAttribute="top" secondItem="ORm-4C-hRS" secondAttribute="bottom" constant="64" id="0nc-F8-e3z"/>
                                             <constraint firstItem="52a-6G-nbz" firstAttribute="top" secondItem="p3n-c1-YEg" secondAttribute="bottom" constant="24" id="6bD-fl-8Dj"/>
@@ -334,6 +333,8 @@
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JCE-Ft-eGu">
                                 <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -556,6 +557,9 @@
         <image name="titleVK" width="750" height="387"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

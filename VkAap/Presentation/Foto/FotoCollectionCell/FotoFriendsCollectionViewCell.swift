@@ -21,7 +21,22 @@ class FotoFriendsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        //imageView.contentMode = .scaleToFill
     }
 
+    lazy var tapGestureRecognizer: UITapGestureRecognizer = {
+      let recognizer = UITapGestureRecognizer(target: self,
+                                              action: #selector(onTap(_:)))
+      recognizer.numberOfTapsRequired = 1
+      recognizer.numberOfTouchesRequired = 1
+      return recognizer
+    }()
+    
+    @objc func onTap(_ sender: UIImageView) {
+        ImageTapAnimations.animateImageTap(imageView: imageView)
+      
+      
+      
+    }
 }

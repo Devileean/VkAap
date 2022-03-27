@@ -8,8 +8,19 @@
 import Foundation
 
 struct FriendModel {
-    var name: String
-    var avatarName: String
-    var genderAndAstrology: String
-    var fotos: [FotoModel]
+    let name: String
+    let avatarName: String
+    let genderAndAstrology: String
+    let fotos: [FotoModel]
+    
+    init (name: String,
+          avatarName: String,
+          genderAndAstrology: String,
+          fotos: [FotoModel]) {
+        self.name = name
+        self.avatarName = avatarName
+        self .genderAndAstrology = genderAndAstrology
+        self.fotos = fotos
+        
+    }
 }
