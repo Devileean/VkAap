@@ -92,28 +92,54 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     //Чтобы отобразить заголовок заголовка в каждом разделе, реализуйте метод tableview(_:titleForHeaderInSection:).
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
         return firstLetters[section]
+        
     }
     
     //Чтобы добавить индексированное табличное представление, реализуйте метод sectionIndexTitles(for:).
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        
         return firstLetters
     }
+    
+    // Вызовите метод willDisplayHeaderView в TableViewController классе
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+
+    // Создаём константу, именна через неё мы будем обращаться к свойствам и изменять их
+    let header = view as! UITableViewHeaderFooterView
+
+    // Установить цвет текста в label
+    header.textLabel?.textColor = .white
+
+    // Установить цвет фона для секции
+    header.tintColor = UIColor.darkGray
+
+    // Установить шрифт и размер шрифта для label
+    header.textLabel?.font = UIFont(name: "Helvetica-Regular", size: 17)
+    }
+
+
 }
 
 extension FriendsViewController: UISearchBarDelegate {
     //MARK: Setup searchBar
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
         searchActive = true
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       
         hideKeyboard()
     }
     
     @objc func hideKeyboard() {
+        
         searchActive = false
         friendsSearchBar.endEditing(true)
     }
     
 }
+
+
