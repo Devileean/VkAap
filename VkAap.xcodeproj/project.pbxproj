@@ -18,6 +18,8 @@
 		498216BF2792D10600B2FB37 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498216BE2792D10600B2FB37 /* NewsViewController.swift */; };
 		4994694527F397E9006269F6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994694327F397E9006269F6 /* NewsCell.swift */; };
 		4994694627F397E9006269F6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994694427F397E9006269F6 /* NewsCell.xib */; };
+		4994694A27F3A692006269F6 /* ViewCountIndicatorControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994694927F3A692006269F6 /* ViewCountIndicatorControlView.swift */; };
+		4994694C27F3A6A6006269F6 /* ViewCountIndicatorControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994694B27F3A6A6006269F6 /* ViewCountIndicatorControl.xib */; };
 		49CE2513277E218600D3B276 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE2512277E218600D3B276 /* GradientView.swift */; };
 		49CE2516277E270800D3B276 /* FotoFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE2514277E270800D3B276 /* FotoFriendsCollectionViewCell.swift */; };
 		49CE2517277E270800D3B276 /* FotoFriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CE2515277E270800D3B276 /* FotoFriendsCollectionViewCell.xib */; };
@@ -55,6 +57,8 @@
 		498216BE2792D10600B2FB37 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		4994694327F397E9006269F6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		4994694427F397E9006269F6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		4994694927F3A692006269F6 /* ViewCountIndicatorControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCountIndicatorControlView.swift; sourceTree = "<group>"; };
+		4994694B27F3A6A6006269F6 /* ViewCountIndicatorControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewCountIndicatorControl.xib; sourceTree = "<group>"; };
 		49CE2512277E218600D3B276 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		49CE2514277E270800D3B276 /* FotoFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		49CE2515277E270800D3B276 /* FotoFriendsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoFriendsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -161,6 +165,15 @@
 			path = NewsCellXib;
 			sourceTree = "<group>";
 		};
+		4994694827F3A652006269F6 /* ViewCountIndicatorControl */ = {
+			isa = PBXGroup;
+			children = (
+				4994694927F3A692006269F6 /* ViewCountIndicatorControlView.swift */,
+				4994694B27F3A6A6006269F6 /* ViewCountIndicatorControl.xib */,
+			);
+			path = ViewCountIndicatorControl;
+			sourceTree = "<group>";
+		};
 		49CE2511277E215B00D3B276 /* CustomsViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +193,7 @@
 		49EEF546277BA43E00261FC2 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				4994694827F3A652006269F6 /* ViewCountIndicatorControl */,
 				49EEF547277BA45300261FC2 /* LikeControl */,
 			);
 			path = Controls;
@@ -456,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4994694C27F3A6A6006269F6 /* ViewCountIndicatorControl.xib in Resources */,
 				49EEF54D277BB03F00261FC2 /* LikeControlView.xib in Resources */,
 				CE73A50F269E2AB200A747FC /* LaunchScreen.storyboard in Resources */,
 				4994694627F397E9006269F6 /* NewsCell.xib in Resources */,
@@ -496,6 +511,7 @@
 				495EA60827773A0F006C5D38 /* FriendsCell.swift in Sources */,
 				CE267F9326AF6C6F00BD71BD /* FotosStorage.swift in Sources */,
 				CE73A52226A0D6E800A747FC /* GroupsViewController.swift in Sources */,
+				4994694A27F3A692006269F6 /* ViewCountIndicatorControlView.swift in Sources */,
 				CE267F9026AF6BD000BD71BD /* FotoModel.swift in Sources */,
 				498216BC2792D0E900B2FB37 /* MessageViewController.swift in Sources */,
 				CE0E145626ABF931000F24FF /* GroupModel.swift in Sources */,
