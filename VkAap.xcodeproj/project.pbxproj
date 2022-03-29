@@ -16,6 +16,8 @@
 		495EA60B2777D809006C5D38 /* CirclePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EA60A2777D809006C5D38 /* CirclePhotoView.swift */; };
 		498216BC2792D0E900B2FB37 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498216BB2792D0E900B2FB37 /* MessageViewController.swift */; };
 		498216BF2792D10600B2FB37 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498216BE2792D10600B2FB37 /* NewsViewController.swift */; };
+		4994694527F397E9006269F6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994694327F397E9006269F6 /* NewsCell.swift */; };
+		4994694627F397E9006269F6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4994694427F397E9006269F6 /* NewsCell.xib */; };
 		49CE2513277E218600D3B276 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE2512277E218600D3B276 /* GradientView.swift */; };
 		49CE2516277E270800D3B276 /* FotoFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE2514277E270800D3B276 /* FotoFriendsCollectionViewCell.swift */; };
 		49CE2517277E270800D3B276 /* FotoFriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49CE2515277E270800D3B276 /* FotoFriendsCollectionViewCell.xib */; };
@@ -51,6 +53,8 @@
 		495EA60A2777D809006C5D38 /* CirclePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhotoView.swift; sourceTree = "<group>"; };
 		498216BB2792D0E900B2FB37 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		498216BE2792D10600B2FB37 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		4994694327F397E9006269F6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		4994694427F397E9006269F6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		49CE2512277E218600D3B276 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		49CE2514277E270800D3B276 /* FotoFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		49CE2515277E270800D3B276 /* FotoFriendsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoFriendsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				498216BE2792D10600B2FB37 /* NewsViewController.swift */,
+				4994693F27F396C3006269F6 /* NewsTable */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -137,6 +142,23 @@
 				498216BB2792D0E900B2FB37 /* MessageViewController.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		4994693F27F396C3006269F6 /* NewsTable */ = {
+			isa = PBXGroup;
+			children = (
+				4994694027F396EF006269F6 /* NewsCellXib */,
+			);
+			path = NewsTable;
+			sourceTree = "<group>";
+		};
+		4994694027F396EF006269F6 /* NewsCellXib */ = {
+			isa = PBXGroup;
+			children = (
+				4994694327F397E9006269F6 /* NewsCell.swift */,
+				4994694427F397E9006269F6 /* NewsCell.xib */,
+			);
+			path = NewsCellXib;
 			sourceTree = "<group>";
 		};
 		49CE2511277E215B00D3B276 /* CustomsViews */ = {
@@ -436,6 +458,7 @@
 			files = (
 				49EEF54D277BB03F00261FC2 /* LikeControlView.xib in Resources */,
 				CE73A50F269E2AB200A747FC /* LaunchScreen.storyboard in Resources */,
+				4994694627F397E9006269F6 /* NewsCell.xib in Resources */,
 				CE73A50C269E2AB200A747FC /* Assets.xcassets in Resources */,
 				CE73A50A269E2AAA00A747FC /* Main.storyboard in Resources */,
 				49CE2517277E270800D3B276 /* FotoFriendsCollectionViewCell.xib in Resources */,
@@ -451,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDD5CCB26A8CDD300C1C321 /* FriendsStorage.swift in Sources */,
+				4994694527F397E9006269F6 /* NewsCell.swift in Sources */,
 				49EEF549277BA4A100261FC2 /* LikeControlView.swift in Sources */,
 				498216BF2792D10600B2FB37 /* NewsViewController.swift in Sources */,
 				49CE2513277E218600D3B276 /* GradientView.swift in Sources */,

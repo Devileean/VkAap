@@ -25,12 +25,15 @@ class FriendsViewController: UIViewController {
         friendsArray = storage.friends
         firstLetters = getFirstLetters(storage.friends)
         friendsSection = sortedForSection(storage.friends, firstLetters: firstLetters)
-        
+
         //убрать клавиатуру из поиска
         tableView.keyboardDismissMode = .onDrag
         
         //регистрируем ячейку чтобы она отображалась в таблице
         tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCellXib")
+   
+        tableView.separatorColor = .clear
+
     }
     
     //делаем сегу для фотографий из таблицы друзей на их фотографию(коллекции)
@@ -84,7 +87,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        let friends = friendsSection[indexPath.section][indexPath.row]//friendsArray[indexPath.row]
+        let friends = friendsSection[indexPath.section][indexPath.row]
         cell.configure(friends: friends)
         return cell
     }
@@ -113,12 +116,13 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
     header.textLabel?.textColor = .white
 
     // Установить цвет фона для секции
-    header.tintColor = UIColor.darkGray
+    header.tintColor = UIColor.lightGray
 
     // Установить шрифт и размер шрифта для label
-    header.textLabel?.font = UIFont(name: "Helvetica-Regular", size: 17)
+    header.textLabel?.font = UIFont(name: "Helvetica-Regular", size: 25)
     }
-
+    
+    
 
 }
 
