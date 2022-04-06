@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsCell" customModule="VkAap" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="765" id="KGk-i7-Jjw" customClass="NewsCell" customModule="VkAap" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCellXib" rowHeight="765" id="KGk-i7-Jjw" customClass="NewsCell" customModule="VkAap" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="597" height="765"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -58,12 +58,21 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBn-AS-ctQ">
                                 <rect key="frame" x="0.0" y="145" width="597" height="570"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ntf-0m-Btb">
+                                        <rect key="frame" x="0.0" y="0.0" width="597" height="570"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ntf-0m-Btb" secondAttribute="trailing" id="8Ec-mR-ywS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ntf-0m-Btb" secondAttribute="bottom" id="DnY-aL-Vc3"/>
+                                    <constraint firstItem="Ntf-0m-Btb" firstAttribute="leading" secondItem="bBn-AS-ctQ" secondAttribute="leading" id="M3c-mp-nfq"/>
                                     <constraint firstAttribute="height" constant="570" id="Niy-cw-l37"/>
+                                    <constraint firstItem="Ntf-0m-Btb" firstAttribute="top" secondItem="bBn-AS-ctQ" secondAttribute="top" id="mIc-a2-cGQ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNx-1G-IGe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNx-1G-IGe" customClass="LikeControlView" customModule="VkAap" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="715" width="90" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -74,7 +83,7 @@
                                 <rect key="frame" x="90" y="715" width="90" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emA-B9-InO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emA-B9-InO" customClass="ViewCountIndicatorControlView" customModule="VkAap" customModuleProvider="target">
                                 <rect key="frame" x="182" y="715" width="90" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -126,6 +135,18 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabelNewsCell" destination="IjW-Pf-iXs" id="6B7-X9-8Db"/>
+                <outlet property="avataImageNewsCell" destination="QE2-dl-uTS" id="DMO-t6-8ut"/>
+                <outlet property="backroundView" destination="x21-Zh-eUD" id="jpK-Zv-p4o"/>
+                <outlet property="commentView" destination="XAe-RS-p1f" id="d9U-EA-PiV"/>
+                <outlet property="dateLabelNewsCell" destination="xLZ-41-bcq" id="mBV-cf-pNo"/>
+                <outlet property="headerLabelNewsCell" destination="wZq-HL-UhW" id="SRw-d9-I6n"/>
+                <outlet property="imageNewsCell" destination="Ntf-0m-Btb" id="C1e-TE-hh4"/>
+                <outlet property="likeControl" destination="hNx-1G-IGe" id="U5C-Oi-sbG"/>
+                <outlet property="shareView" destination="emA-B9-InO" id="2rv-NF-wj8"/>
+                <outlet property="viewsNewsCell" destination="1En-m1-EvB" id="PGV-HJ-4Sb"/>
+            </connections>
             <point key="canvasLocation" x="231.15942028985509" y="71.316964285714278"/>
         </tableViewCell>
     </objects>

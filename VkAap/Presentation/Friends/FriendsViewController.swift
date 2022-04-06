@@ -22,7 +22,7 @@ class FriendsViewController: UIViewController {
         super.viewDidLoad()
         
         let storage = FriendsStorage()
-        friendsArray = storage.friends
+       friendsArray = storage.friends
         firstLetters = getFirstLetters(storage.friends)
         friendsSection = sortedForSection(storage.friends, firstLetters: firstLetters)
 

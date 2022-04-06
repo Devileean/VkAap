@@ -470,14 +470,29 @@
                     <view key="view" contentMode="scaleToFill" id="D8U-qH-URc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PeQ-Uk-S6c">
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="req-kP-3c4"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PeQ-Uk-S6c" firstAttribute="top" secondItem="req-kP-3c4" secondAttribute="top" id="I6w-9M-yqs"/>
+                            <constraint firstItem="PeQ-Uk-S6c" firstAttribute="bottom" secondItem="req-kP-3c4" secondAttribute="bottom" id="RhH-XS-iKp"/>
+                            <constraint firstItem="PeQ-Uk-S6c" firstAttribute="trailing" secondItem="req-kP-3c4" secondAttribute="trailing" id="aLZ-fI-LTh"/>
+                            <constraint firstItem="PeQ-Uk-S6c" firstAttribute="leading" secondItem="req-kP-3c4" secondAttribute="leading" id="w4s-mx-A3B"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="2sj-Zl-70z"/>
+                    <connections>
+                        <outlet property="tableView" destination="PeQ-Uk-S6c" id="qPA-FV-WiR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxG-rQ-NP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="1065"/>
+            <point key="canvasLocation" x="2150.7246376811595" y="1064.7321428571429"/>
         </scene>
         <!--Groups-->
         <scene sceneID="7qe-Vd-miN">
@@ -555,6 +570,9 @@
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="titleVK" width="750" height="387"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
