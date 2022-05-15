@@ -2,32 +2,39 @@
 //  NewsCell.swift
 //  VkAap
 //
-//  Created by Алексей Логинов on 29.03.2022.
+//  Created by Алексей Логинов on 15.05.2022.
 //
 
 import UIKit
 
 class NewsCell: UITableViewCell {
 
-    @IBOutlet weak var avataImageNewsCell: UIImageView!
-    @IBOutlet weak var authorLabelNewsCell: UILabel!
-    @IBOutlet weak var dateLabelNewsCell: UILabel!
-    @IBOutlet weak var headerLabelNewsCell: UILabel!
-    @IBOutlet weak var backroundView: UIView!
-    @IBOutlet weak var likeControl: UIView!
-    @IBOutlet weak var imageNewsCell: UIImageView!
-    @IBOutlet weak var commentView: UIView!
-    @IBOutlet weak var shareView: UIView!
-    @IBOutlet weak var viewsNewsCell: UIView!
+    @IBOutlet weak var avatarAuthorPostImage:  UIImageView!
+    @IBOutlet weak var nameAuthorPostLabel:    UILabel!
+    @IBOutlet weak var postDateLabel:          UILabel!
+    @IBOutlet weak var newsTextView:           UITextView!
+    @IBOutlet weak var newsImageView:          UIImageView!
+    @IBOutlet weak var backgroundNewsPostView: UIView!
     
     
-    func configure(news: NewsModel) {
+    func configure(newsContent: NewsModel) {
         
-        avataImageNewsCell.image = UIImage(named: news.authorAvatarImageNews)
-        authorLabelNewsCell.text = news.authorNameNews
-        dateLabelNewsCell.text = news.publicationDateNews
-        headerLabelNewsCell.text = news.headerNews
-        imageNewsCell.image = UIImage(named: news.newsImage)
+        avatarAuthorPostImage.image            = UIImage(named: newsContent.authorAvatarImageNews)
+        nameAuthorPostLabel.text               = newsContent.authorNameNews
+        postDateLabel.text                     = newsContent.publicationDateNews
+        newsImageView.image                    = UIImage(named: newsContent.newsImage)
+        
+        backgroundNewsPostView.backgroundColor = .lightGray
+        newsTextView.backgroundColor           = .clear
         
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let cornerRadius = avatarAuthorPostImage.frame.width / 2
+        
+        avatarAuthorPostImage.layer.cornerRadius = cornerRadius
+        avatarAuthorPostImage.clipsToBounds      = true
+    }
+    
 }

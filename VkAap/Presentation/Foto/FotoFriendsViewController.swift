@@ -14,7 +14,7 @@ class FotoFriendsViewController: UIViewController {
     
     var  fotografies: [FotoModel] = []
     
-    var f : [Character] = []
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         

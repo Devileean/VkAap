@@ -10,10 +10,10 @@ import UIKit
 class GroupsStorage {
     let groups: [GroupModel]
     let globalGroups: [GroupModel]
+    
     init() {
         groups = []
         globalGroups = [
-
             GroupModel(groupName: "Школа Богатырей", avatarGroup: "shkolabogatirei"),
             GroupModel(groupName: "Киевская Русь", avatarGroup: "kievskaruss"),
             GroupModel(groupName: "Лукоморье", avatarGroup: "lukomorie"),

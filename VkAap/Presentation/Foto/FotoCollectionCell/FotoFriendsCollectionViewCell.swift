@@ -22,7 +22,7 @@ class FotoFriendsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //imageView.contentMode = .scaleToFill
+    
     }
 
     lazy var tapGestureRecognizer: UITapGestureRecognizer = {

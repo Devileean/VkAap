@@ -10,11 +10,10 @@ import UIKit
 class FriendsStorage {
     let friends: [FriendModel]
 
-    
     init() {
         friends = [
             FriendModel(name: "Баба Яга", avatarName: "babajaga", genderAndAstrology: "♀︎ ♏︎", fotos: [FotoModel(fotoName: "baba")]
-            ),
+                       ),
             FriendModel(name: "Финист", avatarName: "finist", genderAndAstrology: "♂︎ ♐︎", fotos: [FotoModel(fotoName: "finist2")]
             ),
             FriendModel(name: "Илья Муромец", avatarName: "iliamuromec", genderAndAstrology: "♂︎ ♎︎", fotos: [FotoModel(fotoName: "murumec2")]

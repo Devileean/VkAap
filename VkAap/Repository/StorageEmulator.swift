@@ -24,7 +24,6 @@ class StorageEmulator {
     return UserDefaults.standard.string(forKey: userIdKey)
   }
 
-  
   static func getFriendsArray() -> [FriendModel]? {
     return UserDefaults.standard.object(forKey: friendsArrayKey) as? [FriendModel]
   }

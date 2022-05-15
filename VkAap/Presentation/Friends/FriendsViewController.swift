@@ -16,13 +16,13 @@ class FriendsViewController: UIViewController {
     var friendsArray: [FriendModel] = []
     private var firstLetters: [String] = []
     
-    
     var searchActive = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let storage = FriendsStorage()
-       friendsArray = storage.friends
+        friendsArray = storage.friends
         firstLetters = getFirstLetters(storage.friends)
         friendsSection = sortedForSection(storage.friends, firstLetters: firstLetters)
 
@@ -42,7 +42,7 @@ class FriendsViewController: UIViewController {
            let destinationController = segue.destination as? FotoFriendsViewController,
            let indexPath = sender as? IndexPath{
             
-            let foto = friendsArray[indexPath.row]
+            let foto = friendsArray[indexPath.item]
             destinationController.fotografies = foto.fotos
             destinationController.title = foto.name
         }
@@ -99,7 +99,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         return firstLetters[section]
         
     }
-    
+
     //Чтобы добавить индексированное табличное представление, реализуйте метод sectionIndexTitles(for:).
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         

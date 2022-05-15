@@ -466,14 +466,18 @@
         <!--News-->
         <scene sceneID="dO0-Te-Lgy">
             <objects>
-                <viewController id="3zy-mY-8TU" customClass="NewsViewController" customModule="VkAap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News" id="3zy-mY-8TU" customClass="NewsViewController" customModule="VkAap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D8U-qH-URc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PeQ-Uk-S6c">
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PeQ-Uk-S6c">
                                 <rect key="frame" x="0.0" y="56" width="414" height="757"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3zy-mY-8TU" id="pAS-ia-3Ka"/>
+                                    <outlet property="delegate" destination="3zy-mY-8TU" id="DRu-FO-wtL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="req-kP-3c4"/>
@@ -487,7 +491,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="News" id="2sj-Zl-70z"/>
                     <connections>
-                        <outlet property="tableView" destination="PeQ-Uk-S6c" id="qPA-FV-WiR"/>
+                        <outlet property="tableView" destination="PeQ-Uk-S6c" id="2xu-iC-8E8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxG-rQ-NP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -570,9 +574,6 @@
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="titleVK" width="750" height="387"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

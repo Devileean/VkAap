@@ -9,7 +9,7 @@ import Foundation
 
 struct GroupModel {
     
-    var groupName: String
+    var groupName:   String
     var avatarGroup: String
 
 }
